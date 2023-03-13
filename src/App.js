@@ -1,5 +1,11 @@
+import ExpenseItem from "./components/ExpenseItem";
+
 function App() {
-  return <div className="App">Hello</div>;
+  return (
+    <div className="App">
+      <ExpenseItem />
+    </div>
+  );
 }
 
 export default App;

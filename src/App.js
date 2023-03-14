@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
@@ -32,6 +32,11 @@ const App = () => {
       return [expense, ...prevExpenses];
     });
   };
+
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(expenses));
+  }, [expenses]);
+  console.log(expenses);
 
   return (
     <div className="App">
